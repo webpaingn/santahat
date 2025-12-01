@@ -78,7 +78,7 @@ body {
     height: 100px;
     background-color: #f5ebdc;
     -webkit-mask: url("/img/icons/copy.svg") no-repeat center;
-    mask: url("/img/icons/copy.svg") no-repeat center;
+    mask: url("../img/icons/copy.svg") no-repeat center;
     mask-size: contain;
     -webkit-mask-size: contain;
     margin-right: 8px;
