@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    background-color: #198737;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.header__img {
+    height: 100%;
+    padding: 5px 0;
+    margin: 0 10px 0 0;
+    box-sizing: border-box;
+}
+.header__name {
+    font-family: "Permanent Marker";
+    font-size: 30px;
+    color: #f5ebdc;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.main__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+}
+.main__logo {
+    font-family: "Permanent Marker";
+    font-size: 100px;
+    color: #f5ebdc;
+}
+.ca__btn {
+    cursor: pointer;
+    padding: 5px 50px;
+    border-radius: 10px;
+    background-color: #d72300;
+    border: none;
+}
+.ca__text {
+    font-family: "Permanent Marker";
+    font-size: 28px;
+    padding: 0 20px 0 0;
+    color: #f5ebdc;
+}
+.ca__copy {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    margin: 10px 0 0 0;
+}
+.ca__img {
+    width: 100px;
+    height: 100px;
+    background-color: #f5ebdc;
+    -webkit-mask: url("/img/icons/copy.svg") no-repeat center;
+    mask: url("/img/icons/copy.svg") no-repeat center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    margin-right: 8px;
+}
+.ca__click {
+    font-family: "Permanent Marker";
+    font-size: 28px;
+    color: #f5ebdc;
+}
+.btn__actions {
+    display: flex;
+    margin: 20px 0 0 0;
+}
+.btn__link {
+    text-decoration: none;
+}
+.btn__buy {
+    padding: 8px 14px;
+    margin: 0 20px 0 0;
+    font-family: "Permanent Marker";
+    font-size: 24px;
+    cursor: pointer;
+    border: 2px solid #d72300;
+    border-radius: 10px;
+    color: #f5ebdc;
+    background-color: #d72300;
+    transition: .2s all;
+}
+.btn__buy:hover {
+    background-color: inherit;
+}
+.btn__com {
+    padding: 8px 14px;
+    font-family: "Permanent Marker";
+    font-size: 24px;
+    cursor: pointer;
+    border: 2px solid #d72300;
+    border-radius: 10px;
+    color: #f5ebdc;
+    background-color: #d72300;
+    transition: .2s all;
+}
+.btn__com:hover {
+    background-color: inherit;
+}
+.main__title {
+    font-family: "Permanent Marker";
+    color: #f5ebdc;
+    font-size: 50px;
+    margin: 50px 0 50px 0;
+}
+
+.main__gallery {
+    display: flex;
+    overflow-x: auto;
+    width: 800px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 1em;
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+}
+.main__gallery::-webkit-scrollbar {
+    display: none;
+}
+.gallery__group {
+    display: flex;
+    gap: 1em;
+    animation: spin 10s infinite linear;
+}
+
+.gallery__group img {
+    width: calc(800px / 4);
+    height: calc(800px / 4);
+}
+@keyframes spin {
+    from {transform: translateX(0);}
+    to {transform: translateX(-100%);}
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 100px 0 0 0;
+}
+.footer__copy {
+    font-family: "Permanent Marker";
+    font-size: 22px;
+    color: #f5ebdc;
+}
+
+@media (max-width: 1200px) {
+    .main__logo {
+        font-size: 80px;
+    }
+    .ca__btn {
+        padding: 5px 40px;
+    }
+    .ca__text {
+        font-size: 24px;
+    }
+    .main__gallery img {
+        width: 200px;
+    }
+}
+@media (max-width: 800px) {
+    .main__container {
+        width: 90%;
+    }
+    .ca__btn {
+        width: 100%;
+        padding: 5px 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .ca__text {
+        font-size: 22px;
+    }
+    .ca__img {
+        width: 80px;
+        height: 80px;
+    }
+    .ca__click {
+        font-size: 22px;
+    }
+    .btn__buy {
+        font-size: 20px;
+        margin: 0 5px 0 0;
+    }
+    .btn__com {
+        font-size: 20px;
+    }
+    .main__gallery {
+        width: 500px;
+    }
+    .main__gallery img {
+        width: calc(500px / 3);
+        height: calc(500px / 3);
+    }
+    .footer__copy {
+        font-size: 18px;
+    }
+}
+@media (max-width: 500px) {
+    .main__logo {
+        font-size: 60px;
+    }
+    .main__gallery {
+        width: 300px;
+    }
+    .main__gallery img {
+        width: calc(400px / 3);
+        height: calc(400px / 3);
+    }
+    .footer__copy {
+        font-size: 16px;
+    }
+}
